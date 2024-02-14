@@ -57,7 +57,7 @@ def handle_message(event):
         line_bot_api.reply_message(event.reply_token, TextSendMessage(GPT_answer))
     except:
         print(traceback.format_exc())
-        line_bot_api.reply_message(event.reply_token, TextSendMessage('已達OpenAI額度上限，請確認Log訊息。'))
+        line_bot_api.reply_message(event.reply_token, TextSendMessage('OpenAI額度問題，請確認Log訊息。'))
         
 
 @handler.add(PostbackEvent)
